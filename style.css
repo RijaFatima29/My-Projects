@@ -1,0 +1,62 @@
+body {
+  font-family: Arial;
+  text-align: center;
+  background-color: #bbdefb; /* one solid blue color */
+  margin: 0;
+  padding: 20px;
+}
+
+
+h1 {
+  color: #1976d2;;
+}
+
+/* white box */
+.box {
+  background: white;
+  margin: 30px auto;
+  padding: 30px;
+  width: 90%;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px gray;
+  transition: transform 0.3s ease;
+}
+
+.box h2 {
+  font-size: 28px;      /* make "About Me" bigger */
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.box p {
+  font-size: 18px;      /* make text bigger */
+  line-height: 1.6;
+}
+
+/* small animation when hover */
+.box:hover {
+  transform: scale(1.02);
+}
+
+/* button style + animation */
+button {
+  background:#1976d2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* button animation */
+button:hover {
+  background:  #0d47a1;
+  transform: scale(1.1);
+}
+
+/* responsive */
+@media (max-width:600px){
+  .box { width: 95%; }
+}
