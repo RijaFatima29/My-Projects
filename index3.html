@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rija’s Collection</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      color: #333;
+      overflow-x: hidden;
+      background: linear-gradient(135deg, #fffaf5, #fde8d8, #fff3e0, #f9e4b7);
+      background-size: 400% 400%;
+      animation: gradientMove 10s ease infinite;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header img {
+      height: 60px;
+      width: auto;
+    }
+
+    header h1 {
+      color: #b88a28;
+      font-family: "Playfair Display", serif;
+      font-weight: 700;
+      font-size: 1.9rem;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #b88a28;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      color: #3b2b00;
+    }
+
+    .hero h2 {
+      font-size: 2.8rem;
+      font-family: "Playfair Display", serif;
+      color: #b88a28;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #444;
+      margin-bottom: 25px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero button {
+      background: linear-gradient(90deg, #d4a537, #b88a28);
+      color: white;
+      border: none;
+      padding: 14px 35px;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero button:hover {
+      transform: translateY(-3px);
+      background: linear-gradient(90deg, #b88a28, #d4a537);
+    }
+
+    /* Logo Section */
+    .logo-section {
+      text-align: center;
+      margin: 50px 0;
+    }
+
+    .logo-section img {
+      width: 250px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Features */
+    .features {
+      text-align: center;
+      padding: 70px 20px;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(8px);
+      margin: 40px 20px;
+      border-radius: 20px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .features h3 {
+      font-size: 2rem;
+      color: #b88a28;
+      margin-bottom: 50px;
+      font-family: "Playfair Display", serif;
+    }
+
+    .feature-boxes {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
+    .feature {
+      background: white;
+      border-radius: 15px;
+      padding: 25px;
+      width: 240px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+    }
+
+    .feature:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature h4 {
+      color: #b88a28;
+      font-weight: 600;
+      margin-bottom: 8px;
+      font-size: 1.1rem;
+    }
+
+    .feature p {
+      color: #444;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 25px 0;
+      font-size: 0.95rem;
+      letter-spacing: 0.5px;
+    }
+
+    footer span {
+      color: #f6c44f;
+      font-weight: 600;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 20px;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+
+      .hero h2 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .features {
+        margin: 20px 10px;
+        padding: 40px 15px;
+      }
+
+      .feature {
+        width: 100%;
+        max-width: 300px;
+      }
+
+      .logo-section img {
+        width: 180px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <img src="images/Rlogo.png" alt="Rija's Logo">
+      <h1>Rija’s Collection</h1>
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Shop</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Elegant. Modern. Beautiful.</h2>
+    <p>Discover the sparkle of Rija’s Collection — where every piece of jewelry defines grace, luxury, and confidence.</p>
+    <button>Shop Now</button>
+  </section>
+
+  <section class="logo-section">
+    <img src="images/Rlogo.png" alt="Rija’s Collection Logo">
+  </section>
+
+  <section class="features">
+    <h3>✨ Why Choose Rija’s Collection?</h3>
+    <div class="feature-boxes">
+      <div class="feature">
+        <h4>Premium Quality</h4>
+        <p>Crafted with the finest materials to ensure long-lasting shine and brilliance.</p>
+      </div>
+      <div class="feature">
+        <h4>Unique Designs</h4>
+        <p>Elegant pieces designed exclusively to match your personal style.</p>
+      </div>
+      <div class="feature">
+        <h4>Fast Delivery</h4>
+        <p>Get your favorite jewelry delivered quickly and securely to your doorstep.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 <span>Rija’s Collection</span> | Designed by Rija 💖
+  </footer>
+</body>
+</html>
+
